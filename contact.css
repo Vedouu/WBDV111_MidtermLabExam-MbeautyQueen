@@ -1,6 +1,4 @@
-
-
-        * {
+ * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -8,11 +6,11 @@
 
         body {
             font-family: 'Lato', sans-serif;
-            background-color: #fce8dc;
+            background-color: #fff8f5;
             color: #3a2a2a;
         }
 
-        /* ===== NAV ===== */
+        
         nav {
             background-color: #fff;
             padding: 20px 60px;
@@ -25,6 +23,7 @@
             z-index: 100;
         }
 
+        
         .logo {
             font-family: 'Playfair Display', serif;
             font-size: 24px;
@@ -49,7 +48,6 @@
             padding-bottom: 4px;
         }
 
-        /* sliding underline on hover*/
         nav ul li a::after {
             content: '';
             position: absolute;
@@ -63,9 +61,29 @@
 
         nav ul li a:hover { color: #b97040; }
         nav ul li a:hover::after { width: 100%; }
+        nav ul li a.active { color: #b97040; }
+        nav ul li a.active::after { width: 100%; }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+
+        /* bawat linya ng hamburger */
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: #b97040;
+        }
 
 
-        /* ===== CONTACT SECTION ===== */
+       
         .contact {
             padding: 70px 60px;
         }
@@ -77,7 +95,7 @@
             margin-bottom: 8px;
         }
 
-        /* gold line under the heading */
+        
         .contact h1::after {
             content: '';
             display: block;
@@ -88,14 +106,14 @@
             margin-bottom: 40px;
         }
 
-        /* left and right side by side */
+       
         .info-and-image {
             display: flex;
             gap: 60px;
             align-items: center;
         }
 
-        /* ===== LEFT SIDE - INFO ===== */
+        
         .info {
             flex: 1;
             display: flex;
@@ -103,6 +121,7 @@
             gap: 28px;
         }
 
+        
         .text h2 {
             font-size: 16px;
             letter-spacing: 3px;
@@ -112,6 +131,7 @@
             margin-bottom: 6px;
         }
 
+      
         .text p,
         .text a {
             font-size: 20px;
@@ -125,8 +145,7 @@
             color: #b97040;
         }
 
-
-        /* ===== RIGHT SIDE - IMAGE ===== */
+        
         .image {
             flex: 1;
             display: flex;
@@ -142,7 +161,7 @@
         }
 
 
-        /* ===== FOOTER ===== */
+        
         footer {
             background-color: #2a1e1e;
             color: #a08070;
@@ -159,4 +178,75 @@
             color: #d4956a;
             display: block;
             margin-bottom: 4px;
+        }
+
+
+ 
+        @media (max-width: 1024px) {
+
+            nav { padding: 18px 30px; }
+            nav ul { gap: 20px; }
+
+            .contact { padding: 50px 30px; }
+
+            
+            .info-and-image {
+                flex-direction: column;
+            }
+
+            .image img {
+                height: auto;
+                max-width: 100%;
+            }
+
+        }
+
+
+        
+        @media (max-width: 600px) {
+
+            nav { padding: 16px 20px; }
+
+       
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 65px;
+                left: 0;
+                right: 0;
+                background-color: #fff;
+                border-bottom: 1px solid #f0d9cc;
+                padding: 10px 0;
+            }
+
+            
+            nav ul.open { display: flex; }
+
+            nav ul li a {
+                display: block;
+                padding: 12px 24px;
+                font-size: 12px;
+            }
+
+    
+            .hamburger { display: flex; }
+
+            .contact { padding: 40px 20px; }
+
+            .contact h1 { font-size: 30px; }
+
+          
+            .text p,
+            .text a { font-size: 16px; }
+
+            .text h2 { font-size: 13px; }
+
+          
+            .image img {
+                height: auto;
+                max-width: 100%;
+            }
+
         }

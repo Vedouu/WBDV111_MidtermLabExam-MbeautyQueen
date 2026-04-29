@@ -14,26 +14,32 @@
 <body>
 
 
-    <!-- NAV -->
+    <!-- navigation bar -->
     <nav>
         <a href="" class="logo">MBeautyQueen</a>
-        <ul>
-              <li><a href="index.html">Home</a></li>
-           
+
+        <!-- hamburger button, lalabas to sa phone lang -->
+        <button class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul id="nav-menu">
+            <li><a href="index.html">Home</a></li>
             <li><a href="sampleservice.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
     </nav>
 
 
-    <!-- CONTACT -->
+    <!-- main contact section, kaliwa ang info, kanan yung photos-->
     <div class="contact">
         <h1>Reach Us</h1>
 
-       
         <div class="info-and-image">
 
-            
+
             <div class="info">
                 <div class="text">
                     <h2>Phone</h2>
@@ -53,22 +59,30 @@
                 </div>
             </div>
 
-            <!-- RIGHT: image -->
+            <!-- right para sa picture -->
             <div class="image">
-                <img src="images\homePhoto.png" />
+                <img src="images/homePhoto.png" alt="MBeautyQueen Salon" />
             </div>
 
         </div>
     </div>
 
 
-    <!-- FOOTER -->
-    
+    <!-- footer sa pinaka-baba ng page -->
     <footer>
         <span class="footer-logo">MBeautyQueen</span>
         <p>Brows &amp; Lashes &nbsp;·&nbsp; Hair Salon &nbsp;·&nbsp; Gluta Drip</p>
         <p>&copy; 2026 MBeautyQueen. All rights reserved.</p>
     </footer>
+
+
+    <!-- script para gumana yung hamburger menu -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('open');
+        }
+    </script>
 
 
 </body>

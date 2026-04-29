@@ -12,7 +12,7 @@
     }
 
 
-    /* NAVIGATION */
+    /* ===== NAV ===== */
     nav {
       background-color: #fff;
       padding: 20px 60px;
@@ -20,7 +20,7 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid #f0d9cc;
-      position: sticky;     
+      position: sticky;
       top: 0;
       z-index: 100;
     }
@@ -46,15 +46,44 @@
       letter-spacing: 2px;
       text-transform: uppercase;
       font-weight: 400;
-      transition: color 0.2s;
+      position: relative;
+      padding-bottom: 4px;
     }
 
-    nav ul li a:hover {
-      color: #b97040;
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #b97040;
+      transition: width 0.3s ease;
+    }
+
+    nav ul li a:hover { color: #b97040; }
+    nav ul li a:hover::after { width: 100%; }
+
+    /* para di mag display sa desktop yung hamburger*/
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: #b97040;
+      transition: all 0.3s;
     }
 
 
-    /*  HERO SECTION*/
+    /* ===== HERO ===== */
     .hero {
       display: flex;
       align-items: center;
@@ -64,17 +93,14 @@
       gap: 60px;
     }
 
-    /* Left: Text */
     .hero-text {
       flex: 1;
     }
 
-  
     .hero-text .eyebrow {
       display: block;
       font-size: 11px;
       letter-spacing: 4px;
-      
       color: #b97040;
       margin-bottom: 18px;
       font-weight: 700;
@@ -93,7 +119,6 @@
       font-style: italic;
     }
 
-    /* Thin line separator */
     .hero-text .divider {
       width: 50px;
       height: 2px;
@@ -109,7 +134,6 @@
       font-weight: 300;
     }
 
-    /* Right: Photo */
     .hero-image {
       flex: 1;
       display: flex;
@@ -117,7 +141,6 @@
       position: relative;
     }
 
-    /* Decorative box behind the photo */
     .hero-image::before {
       content: '';
       position: absolute;
@@ -137,41 +160,18 @@
       height: 520px;
       object-fit: cover;
       border-radius: 8px;
-      position: relative;   
-      z-index: 1;
-    }
-
-    .hero-image .placeholder {
-      width: 100%;
-      max-width: 480px;
-      height: 520px;
-      background-color: #e8c9b8;
-      border-radius: 8px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      color: #8a5c4c;
       position: relative;
       z-index: 1;
     }
 
-    .hero-image .placeholder p {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-size: 16px;
-    }
 
-
-    /* ===== ABOUT SECTION ===== */
+    /* ===== ABOUT ===== */
     .about {
       padding: 80px 60px;
       background-color: #fff;
       text-align: center;
     }
 
-    
     .section-label {
       display: block;
       font-size: 11px;
@@ -189,7 +189,6 @@
       margin-bottom: 12px;
     }
 
-    /* Thin centered line under headings */
     .about .divider {
       width: 50px;
       height: 2px;
@@ -207,7 +206,7 @@
     }
 
 
-    /* ===== SERVICES SECTION ===== */
+    /* ===== SERVICES ===== */
     .services {
       padding: 80px 60px;
       background-color: #fff8f5;
@@ -238,26 +237,18 @@
     .service-card {
       background-color: #fff;
       border: 1px solid #f0d9cc;
+      border-bottom: 3px solid transparent;
       border-radius: 10px;
       padding: 35px 24px;
       width: 230px;
       text-align: center;
-      transition: box-shadow 0.2s, transform 0.2s;
+      transition: box-shadow 0.2s, transform 0.2s, border-bottom-color 0.2s;
     }
 
-    /* Slight lift on hover */
     .service-card:hover {
       box-shadow: 0 8px 24px rgba(185, 112, 64, 0.12);
       transform: translateY(-4px);
-    }
-
-    /* Bottom accent line on hover */
-    .service-card {
-      border-bottom: 3px solid transparent;
-    }
-
-    .service-card:hover {
-      border-bottom: 3px solid #b97040;
+      border-bottom-color: #b97040;
     }
 
     .service-card .icon {
@@ -288,9 +279,7 @@
       text-align: center;
     }
 
-    .why .section-label {
-      color: #d4956a;
-    }
+    .why .section-label { color: #d4956a; }
 
     .why h2 {
       font-family: 'Playfair Display', serif;
@@ -315,8 +304,8 @@
     }
 
     .why-list li {
-      background-color: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(232, 196, 170, 0.25);
+      background-color: rgba(255,255,255,0.06);
+      border: 1px solid rgba(232,196,170,0.25);
       padding: 28px 24px;
       border-radius: 10px;
       color: #f0d9cc;
@@ -327,9 +316,7 @@
       transition: background-color 0.2s;
     }
 
-    .why-list li:hover {
-      background-color: rgba(255, 255, 255, 0.10);
-    }
+    .why-list li:hover { background-color: rgba(255,255,255,0.10); }
 
     .why-list li .icon {
       font-size: 30px;
@@ -355,4 +342,168 @@
       color: #d4956a;
       display: block;
       margin-bottom: 6px;
+    }
+
+
+    /* ======================================
+       TABLET — screens 768px to 1024px
+    ====================================== */
+    @media (max-width: 1024px) {
+
+      nav {
+        padding: 18px 30px;
+      }
+
+      nav ul {
+        gap: 20px;
+      }
+
+      /* hero stacks on tablet too since it's tight */
+      .hero {
+        flex-direction: column;
+        padding: 50px 30px;
+        min-height: auto;
+        text-align: center;
+      }
+
+      .hero-text p {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .hero-text .divider {
+        margin: 0 auto 22px auto;
+      }
+
+      .hero-image::before {
+        display: none;  /* hide the decorative border on smaller screens */
+      }
+
+      .hero-image img {
+        height: 380px;
+        max-width: 100%;
+      }
+
+      .about { padding: 60px 30px; }
+      .services { padding: 60px 30px; }
+      .why { padding: 60px 30px; }
+
+      .service-card { width: 200px; }
+      .why-list li { width: 190px; }
+
+    }
+
+
+    /* ======================================
+       PHONE — screens 600px and below
+    ====================================== */
+    @media (max-width: 600px) {
+
+      /* nav on phone */
+      nav {
+        padding: 16px 20px;
+      }
+
+      /* para matago yung default nav pag phone */
+      nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        border-bottom: 1px solid #f0d9cc;
+        padding: 10px 0;
+      }
+
+      /* when menu is open, show it */
+      nav ul.open {
+        display: flex;
+      }
+
+      nav ul li a {
+        display: block;
+        padding: 12px 24px;
+        font-size: 12px;
+      }
+
+      /* show hamburger button on phone */
+      .hamburger {
+        display: flex;
+      }
+
+      /* hero on phone */
+      .hero {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 30px;
+        text-align: center;
+        min-height: auto;
+      }
+
+      .hero-text h1 {
+        font-size: 36px;
+      }
+
+      .hero-text p {
+        font-size: 15px;
+        max-width: 100%;
+      }
+
+      .hero-text .divider {
+        margin: 0 auto 20px auto;
+      }
+
+      .hero-image::before {
+        display: none;
+      }
+
+      .hero-image img {
+        height: 280px;
+        max-width: 100%;
+      }
+
+      /* about on phone */
+      .about {
+        padding: 50px 20px;
+      }
+
+      .about h2 {
+        font-size: 26px;
+      }
+
+      .about p {
+        font-size: 15px;
+      }
+
+      /* services on phone */
+      .services {
+        padding: 50px 20px;
+      }
+
+      .services h2 {
+        font-size: 26px;
+      }
+
+      .service-card {
+        width: 100%;
+        max-width: 320px;
+      }
+
+      /* why section on phone */
+      .why {
+        padding: 50px 20px;
+      }
+
+      .why h2 {
+        font-size: 26px;
+      }
+
+      .why-list li {
+        width: 100%;
+        max-width: 320px;
+      }
+
     }

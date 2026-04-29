@@ -16,22 +16,27 @@
 </head>
 <body>
 
-   <nav>
-        <a href="" class="logo">MBeautyQueen</a>
-        <ul>
-              <li><a href="index.html">Home</a></li>
-           
-            <li><a href="sampleservice.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+  <!-- NAV -->
+  <nav>
+    <a href="" class="logo">MBeautyQueen</a>
+
+    <!-- hamburger button para sa phone -->
+    <button class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sampleservice.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
 
-
-  <!-- HERO SECTION -->
+  <!-- HERO -->
   <div class="hero">
-
-    <!-- Left: Text -->
     <div class="hero-text">
       <span class="eyebrow">BEAUTY &amp; WELLNESS SANCTUARY</span>
       <h1>
@@ -47,19 +52,15 @@
       </p>
     </div>
 
-    <!-- Right: Photo -->
-    
     <div class="hero-image">
       <img src="images/homePhoto.png"
            alt="MBeautyQueen Salon"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-      
+           onerror="this.style.display='none';" />
     </div>
-
   </div>
 
 
-  <!-- ABOUT SECTION -->
+  <!-- ABOUT -->
   <div class="about">
     <span class="section-label">Who We Are</span>
     <h2>Welcome to MBeautyQueen</h2>
@@ -77,7 +78,7 @@
   </div>
 
 
-  <!-- SERVICES SECTION -->
+  <!-- SERVICES -->
   <div class="services">
     <span class="section-label">What We Offer</span>
     <h2>Our Services</h2>
@@ -101,7 +102,6 @@
         <h3>Gluta Drip</h3>
         <p>Professionally administered gluta drip for skin brightness and overall wellness.</p>
       </div>
-   
 
     </div>
   </div>
@@ -133,12 +133,21 @@
   </div>
 
 
-  <!-- FOOTER -->
+  
   <footer>
     <span class="footer-logo">MBeautyQueen</span>
-    <p>Brows &amp; Lashes &nbsp;·&nbsp; Hair Salon &nbsp;·&nbsp; Gluta Drip &nbsp;</p>
+    <p>Brows &amp; Lashes &nbsp;·&nbsp; Hair Salon &nbsp;·&nbsp; Gluta Drip</p>
     <p>&copy; 2026 MBeautyQueen. All rights reserved.</p>
   </footer>
+
+
+  
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('nav-menu');
+      menu.classList.toggle('open');
+    }
+  </script>
 
 
 </body>

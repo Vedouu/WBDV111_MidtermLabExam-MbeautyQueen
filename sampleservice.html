@@ -11,46 +11,53 @@
 <body>
 
 
-    <!-- NAV -->
+    <!-- para sa nav to -->
     <nav>
         <a href="" class="logo">MBeautyQueen</a>
-        <ul>
+
+        <!-- hamburger pag phone -->
+        <button class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul id="nav-menu">
             <li><a href="index.html">Home</a></li>
-           
-            <li><a href="sampleservice.html">Services</a></li>
+            <li><a href="sampleservice.html" class="active">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
 
-    <!-- HEADER -->
+    <!-- para sa HEADER -->
     <header>
         <h1>Our Services</h1>
         <p>What we offer</p>
     </header>
 
 
-    <!-- CARDS -->
+    <!-- eto yung cards na may picture -->
     <div class="container">
 
         <div class="conserv">
             <h3>Nails</h3>
-            <img src="images\preview.webp" alt="Nails">
+            <img src="images/preview.webp" alt="Nails">
         </div>
 
         <div class="conserv">
             <h3>Hair</h3>
-            <img src="images\preview (1).webp" alt="Hair">
+            <img src="images/preview (1).webp" alt="Hair">
         </div>
 
         <div class="conserv">
             <h3>Lashes</h3>
-            <img src="images\preview (2).webp" alt="Lashes">
+            <img src="images/preview (2).webp" alt="Lashes">
         </div>
 
         <div class="conserv">
             <h3>Gluta Drip</h3>
-            <img src="images\preview (3).webp" alt="Gluta Drip">
+            <img src="images/preview (3).webp" alt="Gluta Drip">
         </div>
 
     </div>
@@ -62,6 +69,15 @@
         <p>Brows &amp; Lashes &nbsp;·&nbsp; Hair Salon &nbsp;·&nbsp; Gluta Drip</p>
         <p>&copy; 2026 MBeautyQueen. All rights reserved.</p>
     </footer>
+
+
+    
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('open');
+        }
+    </script>
 
 
 </body>

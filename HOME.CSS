@@ -61,11 +61,11 @@
     }
 
     nav ul li a:hover { color: #b97040; }
-    nav ul li a:hover::after { width: 100%; } */
+    nav ul li a:hover::after { width: 100%; } 
 
 
 
-    /* para di mag display sa desktop yung hamburger
+    /* para di mag display sa desktop yung hamburger*/
     .hamburger {
       display: none;
       flex-direction: column;

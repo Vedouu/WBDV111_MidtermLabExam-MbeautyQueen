@@ -332,10 +332,10 @@
       background-color: #2a1e1e;
       color: #a08070;
       text-align: center;
-      padding: 35px 20px;
-      font-size: 13px;
-      line-height: 2.2;
-      letter-spacing: 0.5px;
+      padding: 14px 0;
+      font-size: 14.5px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
     }
 
     footer .footer-logo {

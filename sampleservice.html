@@ -11,12 +11,11 @@
 <body>
 
 
-    <!-- para sa nav to -->
-   <nav>
+    <!-- nav -->
+    <nav>
         <a href="index.html" class="logo">MBeautyQueen</a>
 
         <button class="hamburger" onclick="toggleMenu()">
-            <span></span>
             <span></span>
             <span></span>
             <span></span>
@@ -24,59 +23,227 @@
 
         <ul id="nav-menu">
             <li><a href="index.html">Home</a></li>
-            <li><a href="sampleservice.html">Services</a></li>
+            <li><a href="sampleservice.html" class="active">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="booking.html" class="active">Book Now</a></li>
+            <li><a href="booking.html">Book Now</a></li>
         </ul>
     </nav>
 
 
-    <!-- para sa HEADER -->
+    <!-- page header -->
     <header>
-        <h1>Our Services</h1>
-        <p>What we offer</p>
+        <span class="eyebrow">What We Offer</span>
+        <h1>Our <span>Services</span></h1>
+        <div class="divider"></div>
+        <p>Professional beauty and wellness treatments just for you.</p>
     </header>
 
 
-    <!-- eto yung cards na may picture -->
-    <div class="container">
+    <!-- ===== SERVICE CATEGORIES ===== -->
+    <div class="categories">
 
-        <div class="conserv">
-            <h3>Nails</h3>
-            <img src="images/preview.webp" alt="Nails">
+        <div class="section-title">
+            <span class="eyebrow">Browse by Category</span>
+            <h2>Our Services & Pricing</h2>
+            <div class="divider"></div>
         </div>
 
-        <div class="conserv">
-            <h3>Hair</h3>
-            <img src="images/preview (1).webp" alt="Hair">
+
+        <!-- HAIR SERVICES -->
+        <div class="category-block">
+            <div class="category-photo">
+                <!-- palitan ng sariling photo: <img src="images/hair.jpg" alt="Hair"> -->
+                <div class="photo-placeholder">
+                    <p>📸 Add Hair Photo</p>
+                    <span>Replace with your image</span>
+                </div>
+            </div>
+            <div class="category-info">
+                <span class="cat-icon">💇‍♀️</span>
+                <h3>Hair Services</h3>
+                <p class="cat-desc">From cuts and styling to coloring and treatments — we make sure your hair looks healthy, vibrant, and beautiful.</p>
+                <ul class="price-list">
+                    <li><span class="service-name">Haircut</span><span class="service-price">₱ 000</span></li>
+                    <li><span class="service-name">Hair Color</span><span class="service-price">₱ 000</span></li>
+                    <li><span class="service-name">Hair Treatment</span><span class="service-price">₱ 000</span></li>
+                    <li><span class="service-name">Blowdry & Style</span><span class="service-price">₱ 000</span></li>
+                </ul>
+            </div>
         </div>
 
-        <div class="conserv">
-            <h3>Lashes</h3>
-            <img src="images/preview (2).webp" alt="Lashes">
+        <div class="cat-divider"></div>
+
+
+        <!-- NAIL SERVICES -->
+        <div class="category-block reverse">
+            <div class="category-photo">
+                <!-- palitan: <img src="images/nails.jpg" alt="Nails"> -->
+                <div class="photo-placeholder">
+                    <p>📸 Add Nails Photo</p>
+                    <span>Replace with your image</span>
+                </div>
+            </div>
+            <div class="category-info">
+                <span class="cat-icon">💅</span>
+                <h3>Nail Services</h3>
+                <p class="cat-desc">Get perfectly shaped and polished nails with our professional nail services. From classic to creative designs.</p>
+                <ul class="price-list">
+                    <li><span class="service-name">Manicure</span><span class="service-price">₱ 000</span></li>
+                    <li><span class="service-name">Pedicure</span><span class="service-price">₱ 000</span></li>
+                    <li><span class="service-name">Gel Nails</span><span class="service-price">₱ 000</span></li>
+                    <li><span class="service-name">Nail Art</span><span class="service-price">₱ 000</span></li>
+                </ul>
+            </div>
         </div>
 
-        <div class="conserv">
-            <h3>Gluta Drip</h3>
-            <img src="images/preview (3).webp" alt="Gluta Drip">
+        <div class="cat-divider"></div>
+
+
+        <!-- EYELASH EXTENSIONS -->
+        <div class="category-block">
+            <div class="category-photo">
+                <!-- palitan: <img src="images/lashes.jpg" alt="Lashes"> -->
+                <div class="photo-placeholder">
+                    <p>📸 Add Lashes Photo</p>
+                    <span>Replace with your image</span>
+                </div>
+            </div>
+            <div class="category-info">
+                <span class="cat-icon">👁️</span>
+                <h3>Eyelash Extensions</h3>
+                <p class="cat-desc">Enhance your eyes with fuller, longer-looking lashes. We offer classic, volume, and hybrid lash styles.</p>
+                <ul class="price-list">
+                    <li><span class="service-name">Classic Lashes</span><span class="service-price">₱ 000</span></li>
+                    <li><span class="service-name">Volume Lashes</span><span class="service-price">₱ 000</span></li>
+                    <li><span class="service-name">Hybrid Lashes</span><span class="service-price">₱ 000</span></li>
+                    <li><span class="service-name">Lash Removal</span><span class="service-price">₱ 000</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cat-divider"></div>
+
+
+        <!-- GLUTA DRIP -->
+        <div class="category-block reverse">
+            <div class="category-photo">
+                <!-- palitan: <img src="images/gluta.jpg" alt="Gluta Drip"> -->
+                <div class="photo-placeholder">
+                   
+                    
+                </div>
+            </div>
+            <div class="category-info">
+                <span class="cat-icon">💉</span>
+                <h3>Gluta Drip</h3>
+                <p class="cat-desc">Professionally administered gluta drip to support skin brightness and overall wellness in a safe and comfortable setting.</p>
+                <ul class="price-list">
+                    <li><span class="service-name">Basic Gluta Drip</span><span class="service-price">₱ 2500</span></li>
+                    <li><span class="service-name">Premium Gluta Drip</span><span class="service-price">₱ 3000</span></li>
+                    <li><span class="service-name">Vitamin C Drip</span><span class="service-price">₱ 3000</span></li>
+                </ul>
+            </div>
         </div>
 
     </div>
 
 
+    <!-- ===== BEFORE & AFTER GALLERY ===== -->
+    <div class="gallery">
+
+        <div class="section-title">
+            <span class="eyebrow">Client Transformations</span>
+            <h2>Before & After</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="gallery-grid">
+
+            <!-- before/after pair 1 -->
+            <div class="gallery-item">
+                <div class="gallery-photos">
+                    <div class="gallery-half">
+                        <!-- palitan: <img src="images/hair-before.jpg" alt="Before"> -->
+                        <div class="img-placeholder">Before</div>
+                        <span class="photo-label">Before</span>
+                    </div>
+                    <div class="gallery-half">
+                        <!-- palitan: <img src="images/hair-after.jpg" alt="After"> -->
+                        <div class="img-placeholder">After</div>
+                        <span class="photo-label">After</span>
+                    </div>
+                </div>
+                <div class="gallery-label">
+                    <p>Hair Service</p>
+                    <span>Color & Treatment</span>
+                </div>
+            </div>
+
+            <!-- before/after pair 2 -->
+            <div class="gallery-item">
+                <div class="gallery-photos">
+                    <div class="gallery-half">
+                        <div class="img-placeholder">Before</div>
+                        <span class="photo-label">Before</span>
+                    </div>
+                    <div class="gallery-half">
+                        <div class="img-placeholder">After</div>
+                        <span class="photo-label">After</span>
+                    </div>
+                </div>
+                <div class="gallery-label">
+                    <p>Nail Service</p>
+                    <span>Gel Nails & Nail Art</span>
+                </div>
+            </div>
+
+            <!-- before/after pair 3 -->
+            <div class="gallery-item">
+                <div class="gallery-photos">
+                    <div class="gallery-half">
+                        <div class="img-placeholder">Before</div>
+                        <span class="photo-label">Before</span>
+                    </div>
+                    <div class="gallery-half">
+                        <div class="img-placeholder">After</div>
+                        <span class="photo-label">After</span>
+                    </div>
+                </div>
+                <div class="gallery-label">
+                    <p>Eyelash Extensions</p>
+                    <span>Volume Lashes</span>
+                </div>
+            </div>
+
+            <!-- before/after pair 4 -->
+            <div class="gallery-item">
+                <div class="gallery-photos">
+                    <div class="gallery-half">
+                        <div class="img-placeholder">Before</div>
+                        <span class="photo-label">Before</span>
+                    </div>
+                    <div class="gallery-half">
+                        <div class="img-placeholder">After</div>
+                        <span class="photo-label">After</span>
+                    </div>
+                </div>
+                <div class="gallery-label">
+                    <p>Gluta Drip</p>
+                    <span>Skin Brightening</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
     <!-- footer -->
     <footer>
- 
-        <!-- tatlong columns -->
         <div class="footer-top">
- 
-            <!-- kaliwa: brand -->
             <div class="footer-brand">
                 <span class="footer-logo">MBeautyQueen</span>
                 <p>Your trusted beauty and wellness sanctuary in Angono, Philippines.</p>
             </div>
- 
-            <!-- gitna: quick links -->
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <ul>
@@ -86,8 +253,6 @@
                     <li><a href="booking.html">Book Now</a></li>
                 </ul>
             </div>
- 
-            <!-- kanan: contact -->
             <div class="footer-contact">
                 <h4>Contact Us</h4>
                 <p>📞 09066509728</p>
@@ -95,19 +260,14 @@
                 <p>📘 <a href="https://www.facebook.com/share/1JXwh4yunp/" target="_blank">MbeautyQueen Brows And Lashes</a></p>
                 <p>📍 Mahabang Parang, Angono</p>
             </div>
- 
         </div>
- 
-        <!-- copyright sa baba -->
         <div class="footer-bottom">
             <p>&copy; 2026 MBeautyQueen. All rights reserved.</p>
-            <p class="footer-services">Brows &amp; Lashes &nbsp;·&nbsp; Hair Salon &nbsp;·&nbsp; Gluta Drip &nbsp;·&nbsp; Nails</p>
+            <p class="footer-services">Hair &nbsp;·&nbsp; Nails &nbsp;·&nbsp; Lashes &nbsp;·&nbsp; Gluta Drip</p>
         </div>
- 
     </footer>
 
 
-    
     <script>
         function toggleMenu() {
             var menu = document.getElementById('nav-menu');

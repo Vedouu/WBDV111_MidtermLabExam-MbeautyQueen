@@ -1,5 +1,4 @@
-
-        * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -11,55 +10,55 @@
             color: #3a2a2a;
         }
 
-       nav {
-      background-color: #fff;
-      padding: 20px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #f0d9cc;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+        nav {
+            background-color: #fff;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #f0d9cc;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 24px;
-      color: #b97040;
-      text-decoration: none;
-      letter-spacing: 1px;
-    }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #b97040;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 35px;
-    }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 35px;
+        }
 
-    nav ul li a {
-      text-decoration: none;
-      color: #5a3e3e;
-      font-size: 13px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-weight: 400;
-      position: relative;
-      padding-bottom: 4px;
-    }
+        nav ul li a {
+            text-decoration: none;
+            color: #5a3e3e;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 400;
+            position: relative;
+            padding-bottom: 4px;
+        }
 
-    nav ul li a::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0;
-      width: 0;
-      height: 2px;
-      background-color: #b97040;
-      transition: width 0.3s ease;
-    }
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #b97040;
+            transition: width 0.3s ease;
+        }
 
-    nav ul li a:hover { color: #b97040; }
-    nav ul li a:hover::after { width: 100%; }
+        nav ul li a:hover { color: #b97040; }
+        nav ul li a:hover::after { width: 100%; }
 
         /* hamburger para sa phone */
         .hamburger {
@@ -80,7 +79,7 @@
         }
 
 
-        /* ===== HERO — full width, photo as background ===== */
+        /* hero — full width photo as background */
         .hero {
             position: relative;
             height: 420px;
@@ -91,7 +90,6 @@
             overflow: hidden;
         }
 
-        /* yung photo, nakalagay sa likod */
         .hero img {
             position: absolute;
             top: 0; left: 0;
@@ -101,7 +99,6 @@
             object-position: center;
         }
 
-        /* madilim na overlay para mabasa yung text */
         .hero-overlay {
             position: absolute;
             top: 0; left: 0;
@@ -110,7 +107,6 @@
             background-color: rgba(58, 42, 42, 0.52);
         }
 
-        /* yung text sa gitna ng hero */
         .hero-text {
             position: relative;
             z-index: 2;
@@ -157,7 +153,6 @@
             line-height: 1.8;
         }
 
-        /* kapag walang naka-load na larawan, fallback background */
         .hero.no-image {
             background-color: #fce8dc;
         }
@@ -177,7 +172,7 @@
         }
 
 
-        /* ===== FORM SECTION — nakasentro sa gitna ===== */
+        /* form section */
         .booking-section {
             padding: 70px 20px;
             display: flex;
@@ -185,7 +180,6 @@
             align-items: center;
         }
 
-        /* heading sa itaas ng form */
         .booking-section h2 {
             font-family: 'Playfair Display', serif;
             font-size: 32px;
@@ -209,7 +203,6 @@
             margin: 0 auto 14px auto;
         }
 
-        /* yung form card, nakasentro at may max width */
         .form-card {
             background-color: #fff;
             border: 1px solid #f0d9cc;
@@ -234,7 +227,6 @@
             margin-bottom: 8px;
         }
 
-        /* lahat ng input, select, textarea */
         .form-group input,
         .form-group select,
         .form-group textarea {
@@ -257,7 +249,6 @@
             background-color: #fff;
         }
 
-        /* red border kapag may error */
         .form-group input.error,
         .form-group select.error,
         .form-group textarea.error {
@@ -269,7 +260,6 @@
             resize: vertical;
         }
 
-        /* error message sa ilalim ng input */
         .error-msg {
             display: none;
             color: #c0392b;
@@ -281,7 +271,6 @@
             display: block;
         }
 
-        /* date at time side by side */
         .form-row {
             display: flex;
             gap: 16px;
@@ -291,7 +280,6 @@
             flex: 1;
         }
 
-        /* submit button, full width */
         .btn-submit {
             background-color: #3a2a2a;
             color: #fff;
@@ -313,7 +301,6 @@
             background-color: #b97040;
         }
 
-        /* success message */
         .success-msg {
             display: none;
             background-color: #f5ece0;
@@ -334,7 +321,6 @@
             margin-bottom: 8px;
         }
 
-        /* note sa ilalim */
         .form-note {
             margin-top: 20px;
             font-size: 12px;
@@ -346,7 +332,7 @@
 
 
         /* footer */
-         footer {
+        footer {
             background-color: #2a1e1e;
             color: #a08070;
             padding: 55px 60px 30px 60px;
@@ -442,6 +428,8 @@
 
             .booking-section { padding: 50px 20px; }
             .form-card { padding: 35px 30px; }
+
+            footer { padding: 50px 30px 25px 30px; }
         }
 
 
@@ -479,6 +467,20 @@
             .booking-section { padding: 40px 16px; }
             .form-card { padding: 25px 20px; }
 
-            /* date at time, mag-iisa na sa phone */
             .form-row { flex-direction: column; gap: 0; }
+
+            footer { padding: 40px 20px 20px 20px; }
+
+            .footer-top {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .footer-brand p { max-width: 100%; }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 6px;
+                text-align: center;
+            }
         }

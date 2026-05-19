@@ -70,6 +70,7 @@
             border: none; 
             padding: 4px; 
         } 
+        /* bawat linya ng hamburger */ 
         .hamburger span { 
             display: block; 
             width: 24px; 
@@ -137,7 +138,7 @@
             border-radius: 8px; 
         } 
 
-        /* ── footer (exact same as booking/homepage) ── */
+        /* footer — same as booking page */ 
         footer { 
             background-color: #2a1e1e; 
             color: #a08070; 
@@ -214,8 +215,13 @@
             nav { padding: 18px 30px; } 
             nav ul { gap: 20px; } 
             .contact { padding: 50px 30px; } 
-            .info-and-image { flex-direction: column; } 
-            .image img { height: auto; max-width: 100%; } 
+            .info-and-image { 
+                flex-direction: column; 
+            } 
+            .image img { 
+                height: auto; 
+                max-width: 100%; 
+            } 
             footer { padding: 50px 30px 25px 30px; }
         } 
         @media (max-width: 600px) { 
@@ -241,12 +247,19 @@
             .hamburger { display: flex; } 
             .contact { padding: 40px 20px; } 
             .contact h1 { font-size: 30px; } 
-            .text p, .text a { font-size: 16px; } 
+            .text p, 
+            .text a { font-size: 16px; } 
             .text h2 { font-size: 13px; } 
-            .image img { height: auto; max-width: 100%; } 
+            .image img { 
+                height: auto; 
+                max-width: 100%; 
+            } 
             footer { padding: 40px 20px 20px 20px; }
-            .footer-top { flex-direction: column; gap: 30px; }
-            .footer-brand p { max-width: 100%; }
+            .footer-top { 
+                flex-direction: column; 
+                gap: 30px; 
+            } 
+            .footer-brand p { max-width: 100%; } 
             .footer-bottom { 
                 flex-direction: column; 
                 gap: 6px; 
@@ -256,7 +269,8 @@
     </style> 
 </head> 
 <body> 
-    <nav> 
+    <!-- navigation bar --> 
+     <nav> 
         <a href="index.html" class="logo">MBeautyQueen</a> 
         <button class="hamburger" onclick="toggleMenu()"> 
             <span></span> 
@@ -268,10 +282,10 @@
             <li><a href="index.html">Home</a></li> 
             <li><a href="sampleservice.html">Services</a></li> 
             <li><a href="contact.html">Contact</a></li> 
-            <li><a href="booking.html">Book Now</a></li> 
+            <li><a href="booking.html" class="active">Book Now</a></li> 
         </ul> 
     </nav> 
-
+    <!-- main contact section, kaliwa ang info, kanan yung photos--> 
     <div class="contact"> 
         <h1>Reach Us</h1> 
         <div class="info-and-image"> 
@@ -293,12 +307,14 @@
                     <a href="https://maps.app.goo.gl/zkUcbkUTEoau2uuJ8">Brickbane Building, Grandvalley Phase 3,<br>Mahabang Parang, Angono, Philippines</a> 
                 </div> 
             </div> 
+            <!-- right para sa picture --> 
             <div class="image"> 
                 <img src="images/544504578_122154770642787380_6173465503422539150_n.jpg" alt="MBeautyQueen Salon" /> 
             </div> 
         </div> 
     </div> 
 
+    <!-- footer — same as booking page --> 
     <footer> 
         <div class="footer-top"> 
             <div class="footer-brand"> 
@@ -328,6 +344,7 @@
         </div> 
     </footer> 
 
+    <!-- script para gumana yung hamburger menu --> 
     <script> 
         function toggleMenu() { 
             var menu = document.getElementById('nav-menu'); 

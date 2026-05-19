@@ -1,90 +1,338 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - MBeautyQueen</title>
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Contact - MBeautyQueen</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/> 
+    <link rel="stylesheet" href="contact.css"> 
+    <style> 
+       * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        } 
+        body { 
+            font-family: 'Lato', sans-serif; 
+            background-color: #fff8f5; 
+            color: #3a2a2a; 
+        } 
+       nav { 
+      background-color: #fff; 
+      padding: 20px 60px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      border-bottom: 1px solid #f0d9cc; 
+      position: sticky; 
+      top: 0; 
+      z-index: 100; 
+    } 
+    .logo { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 24px; 
+      color: #b97040; 
+      text-decoration: none; 
+      letter-spacing: 1px; 
+    } 
+    nav ul { 
+      list-style: none; 
+      display: flex; 
+      gap: 35px; 
+    } 
+    nav ul li a { 
+      text-decoration: none; 
+      color: #5a3e3e; 
+      font-size: 13px; 
+      letter-spacing: 2px; 
+      text-transform: uppercase; 
+      font-weight: 400; 
+      position: relative; 
+      padding-bottom: 4px; 
+    } 
+    nav ul li a::after { 
+      content: ''; 
+      position: absolute; 
+      bottom: 0; left: 0; 
+      width: 0; 
+      height: 2px; 
+      background-color: #b97040; 
+      transition: width 0.3s ease; 
+    } 
+    nav ul li a:hover { color: #b97040; } 
+    nav ul li a:hover::after { width: 100%; } 
+        .hamburger { 
+            display: none; 
+            flex-direction: column; 
+            gap: 5px; 
+            cursor: pointer; 
+            background: none; 
+            border: none; 
+            padding: 4px; 
+        } 
+        .hamburger span { 
+            display: block; 
+            width: 24px; 
+            height: 2px; 
+            background-color: #b97040; 
+        } 
+        .contact { 
+            padding: 70px 60px; 
+        } 
+        .contact h1 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 40px; 
+            color: #3a2a2a; 
+            margin-bottom: 8px; 
+        } 
+        .contact h1::after { 
+            content: ''; 
+            display: block; 
+            width: 50px; 
+            height: 2px; 
+            background-color: #b97040; 
+            margin-top: 10px; 
+            margin-bottom: 40px; 
+        } 
+        .info-and-image { 
+            display: flex; 
+            gap: 60px; 
+            align-items: center; 
+        } 
+        .info { 
+            flex: 1; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 28px; 
+        } 
+        .text h2 { 
+            font-size: 16px; 
+            letter-spacing: 3px; 
+            text-transform: uppercase; 
+            color: #b97040; 
+            font-weight: 700; 
+            margin-bottom: 6px; 
+        } 
+        .text p, 
+        .text a { 
+            font-size: 20px; 
+            color: #3a2a2a; 
+            text-decoration: none; 
+            font-weight: 300; 
+            line-height: 1.6; 
+        } 
+        .text a:hover { 
+            color: #b97040; 
+        } 
+        .image { 
+            flex: 1; 
+            display: flex; 
+            justify-content: center; 
+        } 
+        .image img { 
+            width: 100%; 
+            max-width: 480px; 
+            height: 500px; 
+            object-fit: cover; 
+            border-radius: 8px; 
+        } 
 
-    
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="contact.css">
-    
-    
-</head>
-<body>
+        /* ── footer (exact same as booking/homepage) ── */
+        footer { 
+            background-color: #2a1e1e; 
+            color: #a08070; 
+            padding: 55px 60px 30px 60px; 
+        } 
+        .footer-top { 
+            display: flex; 
+            justify-content: space-between; 
+            gap: 40px; 
+            padding-bottom: 40px; 
+            border-bottom: 1px solid rgba(255,255,255,0.08); 
+        } 
+        .footer-brand .footer-logo { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 22px; 
+            color: #d4956a; 
+            display: block; 
+            margin-bottom: 10px; 
+        } 
+        .footer-brand p { 
+            font-size: 13px; 
+            color: #7a6060; 
+            font-weight: 300; 
+            line-height: 1.8; 
+            max-width: 200px; 
+        } 
+        .footer-links h4, 
+        .footer-contact h4 { 
+            font-size: 11px; 
+            letter-spacing: 3px; 
+            text-transform: uppercase; 
+            color: #d4956a; 
+            font-weight: 700; 
+            margin-bottom: 16px; 
+        } 
+        .footer-links ul { 
+            list-style: none; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 10px; 
+        } 
+        .footer-links ul li a { 
+            text-decoration: none; 
+            color: #a08070; 
+            font-size: 13px; 
+            font-weight: 300; 
+            transition: color 0.2s; 
+        } 
+        .footer-links ul li a:hover { color: #d4956a; } 
+        .footer-contact p { 
+            font-size: 13px; 
+            color: #a08070; 
+            font-weight: 300; 
+            line-height: 2; 
+        } 
+        .footer-contact a { 
+            color: #a08070; 
+            text-decoration: none; 
+            transition: color 0.2s; 
+        } 
+        .footer-contact a:hover { color: #d4956a; } 
+        .footer-bottom { 
+            padding-top: 25px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            font-size: 12px; 
+            color: #5a4a4a; 
+        } 
+        .footer-bottom p { font-weight: 300; } 
+        .footer-services { font-size: 12px; color: #5a4a4a; font-weight: 300; } 
 
+        @media (max-width: 1024px) { 
+            nav { padding: 18px 30px; } 
+            nav ul { gap: 20px; } 
+            .contact { padding: 50px 30px; } 
+            .info-and-image { flex-direction: column; } 
+            .image img { height: auto; max-width: 100%; } 
+            footer { padding: 50px 30px 25px 30px; }
+        } 
+        @media (max-width: 600px) { 
+            nav { padding: 16px 20px; } 
+            nav ul { 
+                display: none; 
+                flex-direction: column; 
+                gap: 0; 
+                position: absolute; 
+                top: 65px; 
+                left: 0; 
+                right: 0; 
+                background-color: #fff; 
+                border-bottom: 1px solid #f0d9cc; 
+                padding: 10px 0; 
+            } 
+            nav ul.open { display: flex; } 
+            nav ul li a { 
+                display: block; 
+                padding: 12px 24px; 
+                font-size: 12px; 
+            } 
+            .hamburger { display: flex; } 
+            .contact { padding: 40px 20px; } 
+            .contact h1 { font-size: 30px; } 
+            .text p, .text a { font-size: 16px; } 
+            .text h2 { font-size: 13px; } 
+            .image img { height: auto; max-width: 100%; } 
+            footer { padding: 40px 20px 20px 20px; }
+            .footer-top { flex-direction: column; gap: 30px; }
+            .footer-brand p { max-width: 100%; }
+            .footer-bottom { 
+                flex-direction: column; 
+                gap: 6px; 
+                text-align: center; 
+            } 
+        } 
+    </style> 
+</head> 
+<body> 
+    <nav> 
+        <a href="index.html" class="logo">MBeautyQueen</a> 
+        <button class="hamburger" onclick="toggleMenu()"> 
+            <span></span> 
+            <span></span> 
+            <span></span> 
+            <span></span> 
+        </button> 
+        <ul id="nav-menu"> 
+            <li><a href="index.html">Home</a></li> 
+            <li><a href="sampleservice.html">Services</a></li> 
+            <li><a href="contact.html">Contact</a></li> 
+            <li><a href="booking.html">Book Now</a></li> 
+        </ul> 
+    </nav> 
 
-    <!-- navigation bar -->
-     <nav>
-        <a href="index.html" class="logo">MBeautyQueen</a>
+    <div class="contact"> 
+        <h1>Reach Us</h1> 
+        <div class="info-and-image"> 
+            <div class="info"> 
+                <div class="text"> 
+                    <h2>Phone</h2> 
+                    <p>09066509728</p> 
+                </div> 
+                <div class="text"> 
+                    <h2>Email</h2> 
+                    <p>rosalesmaricar1993@gmail.com</p> 
+                </div> 
+                <div class="text"> 
+                    <h2>Facebook</h2> 
+                    <a href="https://www.facebook.com/share/1JXwh4yunp/">MbeautyQueen Brows And Lashes</a> 
+                </div> 
+                <div class="text"> 
+                    <h2>Address</h2> 
+                    <a href="https://maps.app.goo.gl/zkUcbkUTEoau2uuJ8">Brickbane Building, Grandvalley Phase 3,<br>Mahabang Parang, Angono, Philippines</a> 
+                </div> 
+            </div> 
+            <div class="image"> 
+                <img src="images/544504578_122154770642787380_6173465503422539150_n.jpg" alt="MBeautyQueen Salon" /> 
+            </div> 
+        </div> 
+    </div> 
 
-        <button class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+    <footer> 
+        <div class="footer-top"> 
+            <div class="footer-brand"> 
+                <span class="footer-logo">MBeautyQueen</span> 
+                <p>Your trusted beauty and wellness sanctuary in Angono, Philippines.</p> 
+            </div> 
+            <div class="footer-links"> 
+                <h4>Quick Links</h4> 
+                <ul> 
+                    <li><a href="index.html">Home</a></li> 
+                    <li><a href="sampleservice.html">Services</a></li> 
+                    <li><a href="contact.html">Contact</a></li> 
+                    <li><a href="booking.html">Book Now</a></li> 
+                </ul> 
+            </div> 
+            <div class="footer-contact"> 
+                <h4>Contact Us</h4> 
+                <p>📞 09066509728</p> 
+                <p>📧 <a href="mailto:rosalesmaricar1993@gmail.com">rosalesmaricar1993@gmail.com</a></p> 
+                <p>📘 <a href="https://www.facebook.com/share/1JXwh4yunp/" target="_blank">MbeautyQueen Brows And Lashes</a></p> 
+                <p>📍 Mahabang Parang, Angono</p> 
+            </div> 
+        </div> 
+        <div class="footer-bottom"> 
+            <p>&copy; 2026 MBeautyQueen. All rights reserved.</p> 
+            <p class="footer-services">Hair &nbsp;·&nbsp; Nails &nbsp;·&nbsp; Lashes &nbsp;·&nbsp; Gluta Drip</p> 
+        </div> 
+    </footer> 
 
-        <ul id="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sampleservice.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="booking.html" class="active">Book Now</a></li>
-        </ul>
-    </nav>
-
-
-    <!-- main contact section, kaliwa ang info, kanan yung photos-->
-    <div class="contact">
-        <h1>Reach Us</h1>
-
-        <div class="info-and-image">
-
-
-            <div class="info">
-                <div class="text">
-                    <h2>Phone</h2>
-                    <p>09066509728</p>
-                </div>
-                <div class="text">
-                    <h2>Email</h2>
-                    <p>rosalesmaricar1993@gmail.com</p>
-                </div>
-                <div class="text">
-                    <h2>Facebook</h2>
-                    <a href="https://www.facebook.com/share/1JXwh4yunp/">MbeautyQueen Brows And Lashes</a>
-                </div>
-                <div class="text">
-                    <h2>Address</h2>
-                    <a href="https://maps.app.goo.gl/zkUcbkUTEoau2uuJ8">Brickbane Building, Grandvalley Phase 3,<br>Mahabang Parang, Angono, Philippines</a>
-                </div>
-            </div>
-
-            <!-- right para sa picture -->
-            <div class="image">
-                <img src="images/544504578_122154770642787380_6173465503422539150_n.jpg" alt="MBeautyQueen Salon" />
-            </div>
-
-        </div>
-    </div>
-
-
-    <!-- footer sa pinaka-baba ng page -->
-    <footer>
-        <span class="footer-logo">MBeautyQueen</span>
-        <p>Brows &amp; Lashes &nbsp;·&nbsp; Hair Salon &nbsp;·&nbsp; Gluta Drip</p>
-        <p>&copy; 2026 MBeautyQueen. All rights reserved.</p>
-    </footer>
-
-
-    <!-- script para gumana yung hamburger menu -->
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById('nav-menu');
-            menu.classList.toggle('open');
-        }
-    </script>
-
-
-</body>
+    <script> 
+        function toggleMenu() { 
+            var menu = document.getElementById('nav-menu'); 
+            menu.classList.toggle('open'); 
+        } 
+    </script> 
+</body> 
 </html>

@@ -1,4 +1,3 @@
-
     * {
       margin: 0;
       padding: 0;
@@ -11,8 +10,7 @@
       color: #3a2a2a;
     }
 
-
-    /* ===== NAV ===== */
+    /* nav */
     nav {
       background-color: #fff;
       padding: 20px 60px;
@@ -61,11 +59,9 @@
     }
 
     nav ul li a:hover { color: #b97040; }
-    nav ul li a:hover::after { width: 100%; } 
+    nav ul li a:hover::after { width: 100%; }
 
-
-
-    /* para di mag display sa desktop yung hamburger*/
+    /* hamburger — hidden on desktop */
     .hamburger {
       display: none;
       flex-direction: column;
@@ -85,7 +81,7 @@
     }
 
 
-    /* ===== HERO ===== */
+    /* hero */
     .hero {
       display: flex;
       align-items: center;
@@ -134,7 +130,7 @@
       line-height: 1.9;
       max-width: 400px;
       font-weight: 300;
-      text-align: Justify;
+      text-align: justify;
     }
 
     .hero-image {
@@ -168,7 +164,7 @@
     }
 
 
-    /* ===== ABOUT ===== */
+    /* about */
     .about {
       padding: 80px 60px;
       background-color: #fff;
@@ -206,11 +202,11 @@
       max-width: 680px;
       margin: 0 auto 14px auto;
       font-weight: 300;
-      text-align: Justify;
+      text-align: justify;
     }
 
 
-    /* ===== SERVICES ===== */
+    /* services */
     .services {
       padding: 80px 60px;
       background-color: #fff8f5;
@@ -276,7 +272,7 @@
     }
 
 
-    /* ===== WHY CHOOSE US ===== */
+    /* why choose us */
     .why {
       padding: 80px 60px;
       background-color: #3a2a2a;
@@ -329,106 +325,98 @@
     }
 
 
-    /* ===== FOOTER ===== */
+    /* footer — same as services page */
     footer {
-            background-color: #2a1e1e;
-            color: #a08070;
-            padding: 55px 60px 30px 60px;
-        }
+      background-color: #2a1e1e;
+      color: #a08070;
+      padding: 55px 60px 30px 60px;
+    }
 
-        .footer-top {
-            display: flex;
-            justify-content: space-between;
-            gap: 40px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
 
-        .footer-brand .footer-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 22px;
-            color: #d4956a;
-            display: block;
-            margin-bottom: 10px;
-        }
+    .footer-brand .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: #d4956a;
+      display: block;
+      margin-bottom: 10px;
+    }
 
-        .footer-brand p {
-            font-size: 13px;
-            color: #7a6060;
-            font-weight: 300;
-            line-height: 1.8;
-            max-width: 200px;
-        }
+    .footer-brand p {
+      font-size: 13px;
+      color: #7a6060;
+      font-weight: 300;
+      line-height: 1.8;
+      max-width: 200px;
+    }
 
-        .footer-links h4,
-        .footer-contact h4 {
-            font-size: 11px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #d4956a;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
+    .footer-links h4,
+    .footer-contact h4 {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #d4956a;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
 
-        .footer-links ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
+    .footer-links ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
 
-        .footer-links ul li a {
-            text-decoration: none;
-            color: #a08070;
-            font-size: 13px;
-            font-weight: 300;
-            transition: color 0.2s;
-        }
+    .footer-links ul li a {
+      text-decoration: none;
+      color: #a08070;
+      font-size: 13px;
+      font-weight: 300;
+      transition: color 0.2s;
+    }
 
-        .footer-links ul li a:hover { color: #d4956a; }
+    .footer-links ul li a:hover { color: #d4956a; }
 
-        .footer-contact p {
-            font-size: 13px;
-            color: #a08070;
-            font-weight: 300;
-            line-height: 2;
-        }
+    .footer-contact p {
+      font-size: 13px;
+      color: #a08070;
+      font-weight: 300;
+      line-height: 2;
+    }
 
-        .footer-contact a {
-            color: #a08070;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
+    .footer-contact a {
+      color: #a08070;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
 
-        .footer-contact a:hover { color: #d4956a; }
+    .footer-contact a:hover { color: #d4956a; }
 
-        .footer-bottom {
-            padding-top: 25px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 12px;
-            color: #5a4a4a;
-        }
+    .footer-bottom {
+      padding-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #5a4a4a;
+    }
 
-        .footer-bottom p { font-weight: 300; }
-        .footer-services { font-size: 12px; color: #5a4a4a; font-weight: 300; }
+    .footer-bottom p { font-weight: 300; }
+    .footer-services { font-size: 12px; color: #5a4a4a; font-weight: 300; }
 
 
-    /* ======================================
-       TABLET — screens 768px to 1024px
-    ====================================== */
+    /* tablet */
     @media (max-width: 1024px) {
 
-      nav {
-        padding: 18px 30px;
-      }
+      nav { padding: 18px 30px; }
+      nav ul { gap: 20px; }
 
-      nav ul {
-        gap: 20px;
-      }
-
-      /* hero stacks on tablet too since it's tight */
       .hero {
         flex-direction: column;
         padding: 50px 30px;
@@ -436,23 +424,10 @@
         text-align: center;
       }
 
-      .hero-text p {
-        max-width: 100%;
-        margin: 0 auto;
-      }
-
-      .hero-text .divider {
-        margin: 0 auto 22px auto;
-      }
-
-      .hero-image::before {
-        display: none;  /* hide the decorative border on smaller screens */
-      }
-
-      .hero-image img {
-        height: 380px;
-        max-width: 100%;
-      }
+      .hero-text p { max-width: 100%; margin: 0 auto; }
+      .hero-text .divider { margin: 0 auto 22px auto; }
+      .hero-image::before { display: none; }
+      .hero-image img { height: 380px; max-width: 100%; }
 
       .about { padding: 60px 30px; }
       .services { padding: 60px 30px; }
@@ -461,37 +436,28 @@
       .service-card { width: 200px; }
       .why-list li { width: 190px; }
 
+      footer { padding: 50px 30px 25px 30px; }
     }
 
 
-    /* ======================================
-       PHONE — screens 600px and below
-    ====================================== */
+    /* phone */
     @media (max-width: 600px) {
 
-      /* nav on phone */
-      nav {
-        padding: 16px 20px;
-      }
+      nav { padding: 16px 20px; }
 
-      /* para matago yung default nav pag phone */
       nav ul {
         display: none;
         flex-direction: column;
         gap: 0;
         position: absolute;
         top: 65px;
-        left: 0;
-        right: 0;
+        left: 0; right: 0;
         background-color: #fff;
         border-bottom: 1px solid #f0d9cc;
         padding: 10px 0;
       }
 
-      /* when menu is open, show it */
-      nav ul.open {
-        display: flex;
-      }
+      nav ul.open { display: flex; }
 
       nav ul li a {
         display: block;
@@ -499,12 +465,8 @@
         font-size: 12px;
       }
 
-      /* show hamburger button on phone */
-      .hamburger {
-        display: flex;
-      }
+      .hamburger { display: flex; }
 
-      /* hero on phone */
       .hero {
         flex-direction: column;
         padding: 40px 20px;
@@ -513,191 +475,37 @@
         min-height: auto;
       }
 
-      .hero-text h1 {
-        font-size: 36px;
+      .hero-text h1 { font-size: 36px; }
+      .hero-text p { font-size: 15px; max-width: 100%; }
+      .hero-text .divider { margin: 0 auto 20px auto; }
+      .hero-image::before { display: none; }
+      .hero-image img { height: 280px; max-width: 100%; }
+
+      .about { padding: 50px 20px; }
+      .about h2 { font-size: 26px; }
+      .about p { font-size: 15px; }
+
+      .services { padding: 50px 20px; }
+      .services h2 { font-size: 26px; }
+      .service-card { width: 100%; max-width: 320px; }
+
+      .why { padding: 50px 20px; }
+      .why h2 { font-size: 26px; }
+      .why-list li { width: 100%; max-width: 320px; }
+
+      footer { padding: 40px 20px 20px 20px; }
+
+      .footer-top {
+        flex-direction: column;
+        gap: 30px;
       }
 
-      .hero-text p {
-        font-size: 15px;
-        max-width: 100%;
+      .footer-brand p { max-width: 100%; }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
       }
+    }
 
-      .hero-text .divider {
-        margin: 0 auto 20px auto;
-      }
-
-      .hero-image::before {
-        display: none;
-      }
-
-      .hero-image img {
-        height: 280px;
-        max-width: 100%;
-      }
-
-      /* about on phone */
-      .about {
-/* ===== FOOTER ===== */
-        footer {
-            background-color: #2a1e1e;
-            color: #a08070;
-            padding: 55px 60px 30px 60px;
-        }
-
-        .footer-top {
-            display: flex;
-            justify-content: space-between;
-            gap: 40px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .footer-brand .footer-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 22px;
-            color: #d4956a;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .footer-brand p {
-            font-size: 13px;
-            color: #7a6060;
-            font-weight: 300;
-            line-height: 1.8;
-            max-width: 200px;
-        }
-
-        .footer-links h4,
-        .footer-contact h4 {
-            font-size: 11px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #d4956a;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-
-        .footer-links ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .footer-links ul li a {
-            text-decoration: none;
-            color: #a08070;
-            font-size: 13px;
-            font-weight: 300;
-            transition: color 0.2s;
-        }
-
-        .footer-links ul li a:hover { color: #d4956a; }
-
-        .footer-contact p {
-            font-size: 13px;
-            color: #a08070;
-            font-weight: 300;
-            line-height: 2;
-        }
-
-        .footer-contact a {
-            color: #a08070;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer-contact a:hover { color: #d4956a; }
-
-        .footer-bottom {
-            padding-top: 25px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 12px;
-            color: #5a4a4a;
-        }
-
-        .footer-bottom p { font-weight: 300; }
-        .footer-services { font-size: 12px; color: #5a4a4a; font-weight: 300; }
-
-
-        /* tablet */
-        @media (max-width: 1024px) {
-
-            nav { padding: 18px 30px; }
-            nav ul { gap: 20px; }
-
-            .categories { padding: 50px 30px; }
-            .gallery { padding: 50px 30px; }
-            footer { padding: 50px 30px 25px 30px; }
-
-            .category-block { gap: 35px; }
-        }
-
-
-        /* phone */
-        @media (max-width: 600px) {
-
-            nav { padding: 16px 20px; }
-
-            nav ul {
-                display: none;
-                flex-direction: column;
-                gap: 0;
-                position: absolute;
-                top: 65px;
-                left: 0; right: 0;
-                background-color: #fff;
-                border-bottom: 1px solid #f0d9cc;
-                padding: 10px 0;
-            }
-
-            nav ul.open { display: flex; }
-
-            nav ul li a {
-                display: block;
-                padding: 12px 24px;
-                font-size: 12px;
-            }
-
-            .hamburger { display: flex; }
-
-            header { padding: 45px 20px; }
-            header h1 { font-size: 30px; }
-
-            /* categories stack sa phone */
-            .categories { padding: 40px 20px; }
-
-            .category-block,
-            .category-block.reverse {
-                flex-direction: column;
-                gap: 24px;
-                margin-bottom: 50px;
-            }
-
-            .category-photo .photo-placeholder { height: 220px; }
-            .category-photo img { height: 220px; }
-
-            /* gallery */
-            .gallery { padding: 40px 20px; }
-
-            .gallery-item { width: 100%; max-width: 320px; }
-
-            /* footer */
-            footer { padding: 40px 20px 20px 20px; }
-
-            .footer-top {
-                flex-direction: column;
-                gap: 30px;
-            }
-
-            .footer-brand p { max-width: 100%; }
-
-            .footer-bottom {
-                flex-direction: column;
-                gap: 6px;
-                text-align: center;
-            }
-        }
